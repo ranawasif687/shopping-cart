@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./store.js" async></script>
+    <script src="./app.js" async></script>
+    <script src="https://kit.fontawesome.com/3eb6ada773.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./dist/tailwind.css" />
+    
+  </head>
+  <body class="bg-gray-100"><img class="animate-spin fixed hidden h-60 loadData ml-64 mt-36 w-2/4" src="/icons/spinner-solid.svg">
+    <div class="display: inline-flex bg-gray-300 w-full mt-12 h-32">
+      <h2 class="text-6xl text-center ml-96 pt-6">Store Item's</h2>
+      <div class="shopping-bag ml-96 mb-4 pl-22">
+        <button class="" onblur="removecart() " onclick="showcart()"><img class="h-12 w-12 mt-6" src="./icons/cart-shopping-solid.svg" alt="" srcset=""></button>
+          <div class="total-items-in-cart text-3xl pl-6">0</div>
+      </div>
+    </div>
+    <div class="flex pl-42">
+      <div class="">
+        <div class="products grid grid-cols-4 gap-6">
+          <!-- render porducts here -->
+        </div>
+      </div>
+      <div class="cart hidden bg-gray-500 absolute right-1  h-full overflow-auto" onpointerdown="doSomething(event)">
+        <div class="flex bg-indigo-300 mt-11 text-xl">
+          <div class="column1">Item</div>
+          <div class="column2 ml-24">Unit price</div>
+          <div class="column3 ml-20">Units</div>
+        </div>
+        <div class="cart-items display: inline">
+          <!-- render cart items here -->
+        </div>
+        <div  class="cart-footer-one mt-12">
+          <div class="subtotal bg-indigo-400 mt-1 pt-6 text-2xl">
+            Subtotal (0 items): Rs= 0
+          </div>
+          <div
+            class="checkout bg-indigo-400 hover:bg-yellow-700 h-20 text-center mt-1 pt-6 text-2xl">
+            
+            <a href="./index.html">
+              <button class="btn btn-primary btn-purchase" type="button">
+                PURCHASE
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="main-footer bg-black text-5xl text-yellow-500">
+        <div class="container main-footer-container display: inline-flex p-1.5">
+            <h3 class="band-name pl-48 mt-1.5">Grocery-store</h3>
+            <ul class="nav footer-nav display: inline-flex pl-96">
+                
+            </ul>
+        </div>
+    </footer>
+  </body>
+</html>
